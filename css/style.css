@@ -1,0 +1,644 @@
+/* @font-face {
+    font-family: "Helvetica";
+    src: url("../resources/fonts/helvetica.woff");
+} */
+body {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: url("../resources/img/UI/stripeBG.png");
+}
+
+#stage {
+  background-color: #abceed;
+  position: absolute;
+  margin: 0px;
+  z-index: 10;
+  height: 95%;
+  overflow: hidden;
+  top: 33%;
+  left: 0%;
+  width: 100%;
+}
+
+#view {
+  width: 80%;
+  height: 80%;
+  top: 0%;
+  left: 0%;
+  position: absolute;
+}
+
+#storage {
+  width: 0%;
+  height: 0%;
+  top: -100%;
+  left: -100%;
+  position: absolute;
+}
+
+#steps {
+  left: 80.5%;
+  top: 5%;
+  width: 18%;
+  height: 36%;
+  position: absolute;
+  z-index: 100;
+  font-size: .33rem
+}
+
+.repeats {
+  background-image: none;
+}
+
+.stepPanelItem {
+  left: 0%;
+  width: 100%;
+  color: white;
+  background-color: black;
+  padding: 0.05rem 0 0.05rem 0.45rem;
+}
+
+.stepPanelItem::before, .highlight::before, .activeGroup::before, .completed::before {
+  background-repeat: no-repeat;
+  background-position: 0.1rem;
+  display: inline-block;
+  width: .7rem;
+  height: .5rem;
+  content: "";
+  position: relative;
+  top: .12rem;
+}
+
+.stepPanelItem::before {
+  background-image: url("../resources/img/UI/step_inactive.svg");
+}
+
+.step {
+  width: 100%;
+  height: 10%;
+  left: 0%;
+  z-index: 50;
+}
+
+.groupPanelItem {
+  top: 15%;
+  left: 13%;
+  width: 93%;
+  height: 70%;
+  position: absolute;
+}
+
+.group {
+  width: 100%;
+  height: 10%;
+  left: 0%;
+  z-index: 50;
+}
+
+.screen {
+  position: absolute;
+  overflow: hidden;
+}
+
+#header {
+  width: 100%;
+  height: 5%;
+  top: 0%;
+  left: 0%;
+  position: absolute;
+  text-align: center;
+  background-color: black;
+  color: white;
+  z-index: 20;
+  font-size: 0.75rem
+}
+
+#footer {
+  width: 100%;
+  height: 5%;
+  top: 95%;
+  left: 0%;
+  position: absolute;
+  text-align: center;
+  background-color: black;
+  color: white;
+  z-index: 20;
+  font-size: 0.75rem
+}
+
+.opClass {
+  display: none;
+  opacity: 0.0;
+  filter: alpha(opacity=0);
+}
+
+.highlight {
+  color: red;
+}
+
+@keyframes littleSpin {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(720deg);
+  }
+}
+
+.highlight::before {
+  background-image: url("../resources/img/UI/step_active.svg");
+  animation: littleSpin 1s 0s 1 cubic-bezier(0, .5, .5, 1) normal forwards;
+}
+/* .spin {
+  animation: littleSpin 1s 0s 1 cubic-bezier(0, .5, .5, 1) normal forwards;
+  animation-iteration-count: infinite;
+} */
+.highLighted {
+  animation: pulse 1.5s linear 10s infinite normal forwards;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 1px 1px 1rem 0.2rem red;
+  }
+
+  ,
+  50% {
+    box-shadow: 1px 1px 5rem 2rem red;
+  }
+
+  ,
+  100% {
+    box-shadow: 1px 1px 1rem 0.2rem red;
+  }
+}
+
+.activeGroup {
+  color: yellow;
+}
+
+.activeGroup::before {
+  background-image: url("../resources/img/UI/group_active.svg");
+}
+
+.completed {
+  color: grey;
+}
+
+.completed::before {
+  background-image: url("../resources/img/UI/step_complete.svg");
+}
+
+.microTube {
+  width: 2.9%;
+  height: 7%;
+  transform-origin: 100% 0%;
+  z-index: 1;
+}
+
+.tubeColor {
+  stroke: #000000;
+}
+
+.opacity9 {
+  opacity: 0.9;
+}
+
+.opacity8 {
+  opacity: 0.8;
+}
+
+.opacity7 {
+  opacity: 0.7;
+}
+
+.opacity6 {
+  opacity: 0.6;
+}
+
+.opacity5 {
+  opacity: 0.5;
+}
+
+.opacity4 {
+  opacity: 0.4;
+}
+
+.opacity3 {
+  opacity: 0.3;
+}
+
+.opacity2 {
+  opacity: 0.2;
+}
+
+.opacity1 {
+  opacity: 0.1;
+}
+
+.tubeFluid {
+  opacity: 1;
+  fill: #818AC4;
+}
+
+.Cap {
+  transform-origin: 3% 5%;
+}
+
+.ladderTubeColor {
+  fill: grey;
+}
+
+.s0TubeColor {
+  fill: green;
+}
+
+.s1TubeColor {
+  fill: blue;
+}
+
+.s2TubeColor {
+  fill: orange;
+}
+
+.s3TubeColor {
+  fill: purple;
+}
+
+.s4TubeColor {
+  fill: red;
+}
+
+.s5TubeColor {
+  fill: yellow;
+}
+
+.clearTube {
+  fill: #CFCCCC;
+}
+
+.dyeFluid {
+  fill: #2E4EA2;
+}
+
+.item {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  z-index: 0;
+}
+
+.labBench {
+  width: 100%;
+  height: 60%;
+  background-image: url("../resources/img/equipment/labBench2.svg");
+  pointer-events: none !important;
+  z-index: -1;
+}
+
+.shelf1 {
+  width: 18%;
+  height: 3%;
+  background-image: url("../resources/img/equipment/shelf.svg");
+  background-size: cover;
+  z-index: -1;
+}
+
+/* is shelf2 necessary? Can we just use shelf 1?*/
+.shelf2 {
+  width: 18%;
+  height: 3%;
+  background-image: url("../resources/img/equipment/shelf.svg");
+  background-size: cover;
+  z-index: -1;
+}
+
+.enzTube {
+  width: 5% !important;
+  height: 11% !important;
+  transform-origin: 100% 0%;
+}
+
+.iceBucket {
+  width: 20%;
+  height: 12%;
+  background-image: url("../resources/img/equipment/ice_bucket.svg");
+  z-index: 1;
+}
+
+.pipetteHolder {
+  width: 22%;
+  height: 29%;
+  background-image: url("../resources/img/equipment/pipetteHolder.svg");
+  z-index: -1;
+}
+
+.micropipette {
+  width: 4.6%;
+  height: 23%;
+  background-image: url("../resources/img/equipment/micropipette20.svg");
+  background-size: cover;
+  z-index: 4;
+}
+
+.tipHolder {
+  width: 11%;
+  height: 11%;
+  background-image: url("../resources/img/equipment/tipHolder.svg");
+  z-index: 1;
+}
+
+.tip {
+  width: 0.7%;
+  height: 7%;
+  background-image: url("../resources/img/equipment/tip.svg");
+  background-size: cover;
+}
+
+.activeTip {
+  width: 0.7%;
+  height: 7%;
+  background-size: cover;
+}
+
+.tubeBlock {
+  width: 17%;
+  height: 5.1%;
+  background-image: url("../resources/img/equipment/tubeBlock.svg");
+  z-index: 2;
+}
+
+.wasteBasket {
+  width: 11.5%;
+  height: 14%;
+  background-image: url("../resources/img/equipment/waste_basket.svg");
+  z-index: 1;
+}
+
+.waterBathNoLid {
+  width: 18%;
+  height: 26%;
+  background-image: url("../resources/img/equipment/water_bath_no_lid.svg");
+  z-index: 2;
+}
+
+.waterBathLid {
+  width: 16%;
+  height: 6%;
+  background-image: url("../resources/img/equipment/water_bath_lid.svg");
+  z-index: 3;
+}
+
+.dyeRack {
+  width: 10%;
+  height: 7%;
+  background-image: url("../resources/img/equipment/dyeRack.svg");
+  z-index: 1;
+}
+
+.loadDye {
+  width: 5%;
+  height: 15%;
+  transform-origin: 100% 0%;
+}
+
+.gelTray {
+  width: 13%;
+  height: 8%;
+  background-image: url("../resources/img/equipment/gelTray.svg");
+}
+
+.gelComb {
+  width: 11%;
+  height: 8%;
+  background-image: url("../resources/img/equipment/gelComb.svg");
+}
+
+.electroBoxSide {
+  width: 20%;
+  height: 6%;
+  background-image: url("../resources/img/equipment/electroBoxSide.svg");
+}
+
+.stainingTraySide {
+  width: 10%;
+  height: 4%;
+  background-image: url("../resources/img/equipment/stainingTraySide.svg");
+}
+
+.stainingTray {
+  width: 20%;
+  height: 20%;
+  background-image: url("../resources/img/equipment/stainingTray.svg");
+}
+
+.stainedGel {
+  width: 10%;
+  height: 4%;
+  background-image: url("../resources/img/equipment/stainedGel.svg");
+}
+
+.graduatedCylinder {
+  width: 2%;
+  height: 14%;
+}
+
+.labBenchTop {
+  width: 85%;
+  height: 175%;
+  background-image: url("../resources/img/equipment/labBenchTop.svg");
+}
+
+.gelTopView {
+  width: 9%;
+  height: 10%;
+}
+
+.lidBox {
+  width: 35%;
+  height: 45%;
+  background-image: url("../resources/img/equipment/lidBox.svg");
+}
+
+.electroBoxBase {
+  width: 11%;
+  height: 29%;
+  background-image: url("../resources/img/equipment/electroBoxBase.svg");
+}
+
+.lidSide {
+  width: 21%;
+  height: 30%;
+  background-image: url("../resources/img/equipment/lidSide.svg");
+}
+
+.arrowUp {
+  width: 5%;
+  height: 16%;
+  background-image: url("../resources/img/equipment/arrowUp.svg");
+}
+
+.arrowDown {
+  width: 5%;
+  height: 16%;
+  background-image: url("../resources/img/equipment/arrowDown.svg");
+}
+
+.powerSupplyTop {
+  width: 15%;
+  height: 30%;
+  background-image: url("../resources/img/equipment/powerSupplyTop.svg");
+}
+
+.tubeBlockTop {
+  width: 8%;
+  height: 33%;
+  background-image: url("../resources/img/equipment/tubeBlockTop.svg");
+}
+
+.tubeTop {
+  width: 5%;
+  height: 2.7%;
+  left: 35.2%;
+}
+
+.tipBoxTop {
+  width: 10%;
+  height: 10%;
+}
+
+.wasteBinTop {
+  width: 10%;
+  height: 10%;
+  background-image: url("../resources/img/equipment/wasteBinTop.svg");
+}
+
+.micropipetteTopView {
+  width: 2%;
+  height: 7%;
+  background-image: url("../resources/img/equipment/micropipetteTopView.svg");
+}
+
+.sideView {
+  width: 45%;
+  height: 60%;
+  background-image: url("../resources/img/equipment/sideBackground.svg");
+  overflow: hidden;
+}
+
+.pipetteTip1 {
+  width: 15%;
+  height: 22.5%;
+}
+
+.gelWell {
+  width: 98%;
+  height: 53%;
+  background: rgba(59, 128, 194, .46);
+}
+
+.gelWellBoundary {
+  width: 60%;
+  height: 40%;
+  background: rgba(59, 128, 194, .86);
+}
+
+.volumeInput {
+  -webkit-appearance: none;
+  width: 45%;
+  height: 10%;
+  margin: 0;
+  padding: 0;
+  border: .1rem;
+  left: 45%;
+  top: 32%;
+  position: absolute;
+  background-repeat: no-repeat;
+  font-size: .25rem;
+  z-index: 10;
+  outline-width: 0;
+}
+
+.volumeButton {
+  width: 64%;
+  height: 10%;
+  left: 100%;
+  top: 32%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../resources/img/UI/check.svg");
+  outline-width: 0;
+}
+
+.timerInput {
+  -webkit-appearance: none;
+  width: 12%;
+  height: 8%;
+  margin: 0;
+  padding: 0;
+  border: .1rem;
+  left: 10%;
+  top: 82%;
+  position: absolute;
+  background-repeat: no-repeat;
+  font-size: .25rem;
+  z-index: 10;
+  outline-width: 0;
+}
+
+.timerButton {
+  width: 13%;
+  height: 8%;
+  left: 24%;
+  top: 82%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-image: url("../resources/img/UI/check.svg");
+  background-size: cover;
+  outline-width: 0;
+}
+
+.powerInput {
+  -webkit-appearance: none;
+  width: 25%;
+  height: 10%;
+  margin: 0;
+  padding: 0;
+  border: .1rem;
+  left: 45%;
+  top: 42%;
+  position: absolute;
+  background-repeat: no-repeat;
+  font-size: .25rem;
+  z-index: 10;
+  outline-width: 0;
+}
+
+.powerButton {
+  width: 26%;
+  height: 10%;
+  left: 90%;
+  top: 42%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../resources/img/UI/check.svg");
+  outline-width: 0;
+}
+
+.sideView {
+  width: 45%;
+  height: 60%;
+  background-image: url("../resources/img/UI/sideBackground.svg");
+}
+
+ .bandstart {y:150}

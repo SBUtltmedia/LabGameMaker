@@ -1,1 +1,1 @@
-# LabGame
+# LabGameMaker
