@@ -1,13 +1,14 @@
 function Overlay() {
-  this.message = function(textMessage, textButton) {
+
+  this.message = (textMessage, textButton = "OK") =>{
     textMessage = textMessage.replace("\n", "<br>")
     this.showOverlay()
     $("#messageText").html(textMessage)
     $("#messageButton").html(textButton)
     $('#messageBox').show();
-    $('#messageButton').on("click", function() {
+    $('#messageButton').on("click", () =>{
       $('#messageBox').hide();
-      overlay.hideOverlay()
+      this.hideOverlay()
     })
 
   }

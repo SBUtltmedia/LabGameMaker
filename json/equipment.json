@@ -1,0 +1,23 @@
+[{
+  "itemId": "liquidContainer",
+  "liquidType": "empty",
+  "acceptedInputs": ["pipette"],
+  "inputFunction" : "transferLiquid",
+  "classes": ["referenceItem liquidContainer"],
+  "resources": ""
+}, {
+  "itemId": "tube",
+  "color": "gray",
+  "liquidType": "empty",
+  "acceptedInputs": ["pipette"],
+  "inputFunction" : "transferLiquid",
+  "classes": ["referenceItem microTube"],
+  "resources": "img/equipment/csTube.svg"
+}, {
+  "itemId": "pipette",
+  "volume": 0,
+  "liquidType": "empty",
+  "acceptedInputs": ["keyboard"],
+  "classes": ["referenceItem micropipette"],
+  "resources": ""
+}]

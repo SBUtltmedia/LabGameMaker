@@ -7,27 +7,29 @@ function Item() {
       itemId
     }))
   }
+  
 
 
   this.buildItem = function({
     parent = "#view",
     itemId,
-    css,
+    css = {},
     classes = [],
-    resources,
+    resources ,
   })
 
 
   {
     //
     var defer = $.Deferred();
+     console.log(resources == false)
     if (resources) {
       $.ajax({
         url: "./resources/" + resources,
         dataType: "text",
-        success: function(data) {
+        success: (data)=> {
 
-          makeDOMItem({
+          this.makeDOMItem({
             parent,
             itemId,
             css,
@@ -49,7 +51,7 @@ function Item() {
       })
     } else {
       data = "";
-      makeDOMItem({
+      this.makeDOMItem({
         parent,
         itemId,
         css,
@@ -59,16 +61,16 @@ function Item() {
       })
 
         defer.resolve("no resource")
-    
+
 
     }
     return defer.promise();
   }
 
-  function makeDOMItem({
-    parent = "#view",
+  this.makeDOMItem = function({
+    parent = "#cabinet",
     itemId,
-    css,
+    css = {},
     classes = [],
     data = ""
 
