@@ -301,7 +301,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
-  z-index: 0;
+  z-index: 5;
 }
 
 .labBench {

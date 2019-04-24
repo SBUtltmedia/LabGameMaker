@@ -1,33 +1,34 @@
 function Item() {
 
+  this.itemList = {
 
+  }
   this.buildItemById = function(itemId) {
 
     return this.buildItem(Object.assign({}, domItems[itemId], {
       itemId
     }))
   }
-  
 
 
+this.addItemToList = function(item) {
+  this.itemList[item.itemId] = item
+}
   this.buildItem = function({
     parent = "#view",
     itemId,
     css = {},
     classes = [],
-    resources ,
+    resources,
   })
-
-
   {
-    //
     var defer = $.Deferred();
-     console.log(resources == false)
+    console.log(resources == false)
     if (resources) {
       $.ajax({
         url: "./resources/" + resources,
         dataType: "text",
-        success: (data)=> {
+        success: (data) => {
 
           this.makeDOMItem({
             parent,
@@ -38,7 +39,7 @@ function Item() {
           })
 
 
-            defer.resolve("resource")
+          defer.resolve("resource")
 
 
 
@@ -60,7 +61,7 @@ function Item() {
 
       })
 
-        defer.resolve("no resource")
+      defer.resolve("no resource")
 
 
     }
