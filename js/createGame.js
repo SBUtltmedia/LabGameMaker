@@ -1,13 +1,13 @@
 $(function() {
 
-  $( document ).on( "DOMNodeInserted", function( e ) {
-  	var classes=$(e.target).attr("class");
-  if(classes && classes.match(/^hl_/)){
-  $(e.target).addClass("commented-selection")
+  $(document).on("DOMNodeInserted", function(e) {
+    var classes = $(e.target).attr("class");
+    if (classes && classes.match(/^hl_/)) {
+      $(e.target).addClass("commented-selection")
 
 
-  }
-  	  // the new element
+    }
+    // the new element
   });
 
 
@@ -33,7 +33,7 @@ $(function() {
   }).then(function() {
     console.log("HELLO")
     setTimeout(function() {
-      $(`#cabinet *`).on("click", function(event){
+      $(`#cabinet *`).on("click", function(event) {
         console.log(event.target.id)
       })
       $(`#cabinet >div`).draggable({
@@ -52,11 +52,13 @@ $(function() {
           }
           newItem.parent = "#view"
           console.log(newItem)
-          item.buildItem(newItem)
-          // $(`#${newItem.id}`).draggable({
-          //   revert:false,
-          //   disabled: true
-          // })
+          item.buildItem(newItem).then(() => {
+            console.log(newItem.itemId)
+            $(`#${newItem.itemId}`).draggable({
+              revert: false,
+              disabled: false
+            })
+          })
         }
       })
     }, 1000)
