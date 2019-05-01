@@ -19,5 +19,5 @@
   "liquidType": "empty",
   "acceptedInputs": ["keyboard"],
   "classes": ["referenceItem micropipette"],
-  "resources": ""
+  "resources": "html/pipetteForm.htm"
 }]
