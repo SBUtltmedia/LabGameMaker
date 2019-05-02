@@ -41,11 +41,12 @@ $(function() {
         disabled: false,
         helper: "clone",
         stop: function(event, ui) {
+          //check out https://jsfiddle.net/c9nyewfr/
           console.log(event.target.is)
-          var viewWidth = $("#view").css("width").replace(/[^-\d\.]/g, '')
-          var viewHeight = $("#view").css("height").replace(/[^-\d\.]/g, '')
-          var itemWidth = $(`#${event.target.id}`).css("width").replace(/[^-\d\.]/g, '')
-          var itemHeight = $(`#${event.target.id}`).css("height").replace(/[^-\d\.]/g, '')
+          var viewWidth = parseInt($("#view").css("width"))
+          var viewHeight = parseInt($("#view").css("height"))
+          var itemWidth = parseInt($(`#${event.target.id}`).css("width"))
+          var itemHeight = parseInt($(`#${event.target.id}`).css("height"))
 
 
           console.log(ui)
@@ -108,8 +109,8 @@ $(function() {
     var newDomItems = {}
     $("#view >div").each(function() {
       var referenceItem = this.id.split(/\d/)[0]
-      var newLeft = ($(`#${this.id}`).css("left").replace(/[^-\d\.]/g, '')) / ($("#view").css("width").replace(/[^-\d\.]/g, '')) * 100 //css has px on values which make division annoying, need to remove non-digits
-      var newTop = ($(`#${this.id}`).css("top").replace(/[^-\d\.]/g, '')) / ($("#view").css("height").replace(/[^-\d\.]/g, '')) * 100
+      var newLeft = parseInt($(`#${this.id}`).css("left")) / parseInt($("#view").css("width")) * 100 //css has px on values which make division annoying, need to remove non-digits
+      var newTop = parseInt($(`#${this.id}`).css("top")) / parseInt($("#view").css("height")) * 100
       newDomItems[this.id] = {
         css: {
           left: `${newLeft}%`,
@@ -120,6 +121,12 @@ $(function() {
       }
     })
     console.log(newDomItems)
+  let payLoad={gameName:"testGame",domItems:newDomItems}
+  $.post('api/index.php/save_dom_items',JSON.stringify(payLoad),function(response){
+
+console.log(response)
+
+}, "json");
     overlay.message("All your items have been saved. \n Please start creating each step.", "OK")
   })
 
