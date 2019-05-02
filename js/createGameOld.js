@@ -46,8 +46,6 @@ $(function() {
           var viewHeight = $("#view").css("height").replace(/[^-\d\.]/g, '')
           var itemWidth = $(`#${event.target.id}`).css("width").replace(/[^-\d\.]/g, '')
           var itemHeight = $(`#${event.target.id}`).css("height").replace(/[^-\d\.]/g, '')
-
-
           console.log(ui)
           if (ui.position.left < 0) {
             ui.position.left = 0
@@ -61,22 +59,11 @@ $(function() {
           }
           newItem = item.itemList[event.target.id]
           newItem.itemId = event.target.id + Date.now()
-
-
           newItem.css = {
             left: `${ui.position.left}px`,
             top: `${ui.position.top}px`,
             position: "absolute"
           }
-          // The reason why it is shifting its position to top right a little bit is because it is moving between the div cabinet and stage.
-          // Because its css is dependant on the percentage of its carrier, its sizes changes, and the position also changes because its position bases off the position of the carrier div.
-          // We have to calculate the chages between them if we do not want them to shift, if not make the div sizes and locations equal to each other.
-
-          // stage css top:0 , left: 10, width & height: 80%
-          // cabinet css top:5 , left: 0, width & height: 100%
-
-
-
           newItem.parent = "#view"
           console.log(newItem)
           item.buildItem(newItem).then(() => {
