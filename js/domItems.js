@@ -6,7 +6,7 @@ domItems = {
       left: "0%",
       top: "67%",
     },
-    classes: ["item labBench"],
+    classes: "item labBench",
     resources: "",
   },
   "shelf1": {
@@ -14,7 +14,7 @@ domItems = {
       left: "60%",
       top: "40%",
     },
-    classes: ["item shelf1"],
+    classes: "item shelf1",
     resources: "",
   },
   "shelf2": {
@@ -22,7 +22,7 @@ domItems = {
       left: "2.5%",
       top: "31%",
     },
-    classes: ["item shelf2"],
+    classes: "item shelf2",
     resources: "",
   },
   "enzTube": {
@@ -30,7 +30,7 @@ domItems = {
       left: "85.5%",
       top: "62.7%",
     },
-    classes: ["item clearTube enzTube"],
+    classes: "item clearTube enzTube",
     resources: "img/equipment/csTube.svg",
   },
   "iceBucket": {
@@ -38,7 +38,7 @@ domItems = {
       left: "80%",
       top: "66.4%",
     },
-    classes: ["item iceBucket"],
+    classes: "item iceBucket",
     resources: "",
   },
   "pipetteHolder": {
@@ -46,14 +46,14 @@ domItems = {
       left: "-0.25%",
       top: "50.7%",
     },
-    classes: ["item pipetteHolder"]
+    classes: "item pipetteHolder"
   },
   "micropipette0": {
     css: {
       left: "0.5%",
       top: "52%",
     },
-    classes: ["item micropipette"],
+    classes: "item micropipette",
     resources: "",
   },
   "micropipette1": {
@@ -61,7 +61,7 @@ domItems = {
       left: "7.5%",
       top: "52%",
     },
-    classes: ["item micropipette"],
+    classes: "item micropipette",
     resources: "",
   },
   "micropipette2": {
@@ -70,7 +70,7 @@ domItems = {
       top: "52%",
 
     },
-    classes: ["item micropipette"],
+    classes: "item micropipette",
     resources: "html/pipetteForm.htm",
   },
   "tipHolder": {
@@ -79,7 +79,7 @@ domItems = {
       top: "69.5%",
       "pointer-events": "none",
     },
-    classes: ["item tipHolder"],
+    classes: "item tipHolder",
     resources: "",
   },
   "tip1": {
@@ -87,7 +87,7 @@ domItems = {
       left: "20.8%",
       top: "68.5%",
     },
-    classes: ["item tip"],
+    classes: "item tip",
     resources: "",
   },
   "tip2": {
@@ -95,7 +95,7 @@ domItems = {
       left: "21.6%",
       top: "68.5%",
     },
-    classes: ["item tip"],
+    classes: "item tip",
     resources: "",
   },
   "tip3": {
@@ -103,7 +103,7 @@ domItems = {
       left: "22.4%",
       top: "68.5%",
     },
-    classes: ["item tip"],
+    classes: "item tip",
     resources: "",
   },
   "tip4": {
@@ -111,7 +111,7 @@ domItems = {
       left: "23.2%",
       top: "68.5%",
     },
-    classes: ["item tip"],
+    classes: "item tip",
     resources: "",
   },
   "tip5": {
@@ -119,7 +119,7 @@ domItems = {
       left: "24%",
       top: "68.5%",
     },
-    classes: ["item tip"],
+    classes: "item tip",
     resources: "",
   },
   "tip6": {
@@ -127,7 +127,7 @@ domItems = {
       left: "24.8%",
       top: "68.5%",
     },
-    classes: ["item tip"],
+    classes: "item tip",
     resources: "",
   },
   "tip7": {
@@ -135,7 +135,7 @@ domItems = {
       left: "25.6%",
       top: "68.5%",
     },
-    classes: ["item tip"],
+    classes: "item tip",
     resources: "",
   },
   "tip8": {
@@ -143,7 +143,7 @@ domItems = {
       left: "26.4%",
       top: "68.5%",
     },
-    classes: ["item tip"],
+    classes: "item tip",
     resources: "",
   },
   "tip9": {
@@ -151,7 +151,7 @@ domItems = {
       left: "27.2%",
       top: "68.5%",
     },
-    classes: ["item tip"],
+    classes: "item tip",
     resources: "",
   },
   "tip10": {
@@ -159,7 +159,7 @@ domItems = {
       left: "28%",
       top: "68.5%",
     },
-    classes: ["item tip"],
+    classes: "item tip",
     resources: "",
   },
   "tip11": {
@@ -167,7 +167,7 @@ domItems = {
       left: "28.8%",
       top: "68.5%",
     },
-    classes: ["item tip"],
+    classes: "item tip",
     resources: "",
   },
   "tip12": {
@@ -175,7 +175,7 @@ domItems = {
       left: "29.6%",
       top: "68.5%",
     },
-    classes: ["item tip"],
+    classes: "item tip",
     resources: "",
   },
   "tubeBlock": {
@@ -183,7 +183,7 @@ domItems = {
       left: "35.2%",
       top: "73.0%",
     },
-    classes: ["item tubeBlock"],
+    classes: "item tubeBlock",
     resources: "",
   },
   "s0Tube": {
@@ -191,7 +191,7 @@ domItems = {
       left: "35.5%",
       top: "70%",
     },
-    classes: ["item microTube s0TubeColor"],
+    classes: "item microTube s0TubeColor",
     resources: "img/equipment/csTube.svg",
   },
   "s1Tube": {
@@ -199,7 +199,7 @@ domItems = {
       left: "38%",
       top: "70%",
     },
-    classes: ["item microTube s1TubeColor"],
+    classes: "item microTube s1TubeColor",
     resources: "img/equipment/csTube.svg",
   },
   "s2Tube": {
@@ -207,7 +207,7 @@ domItems = {
       left: "40.5%",
       top: "70%",
     },
-    classes: ["item microTube s2TubeColor"],
+    classes: "item microTube s2TubeColor",
     resources: "img/equipment/csTube.svg",
   },
   "s3Tube": {
@@ -215,7 +215,7 @@ domItems = {
       left: "43%",
       top: "70%",
     },
-    classes: ["item microTube s3TubeColor"],
+    classes: "item microTube s3TubeColor",
     resources: "img/equipment/csTube.svg",
   },
   "s4Tube": {
@@ -223,7 +223,7 @@ domItems = {
       left: "45.5%",
       top: "70%",
     },
-    classes: ["item microTube s4TubeColor"],
+    classes: "item microTube s4TubeColor",
     resources: "img/equipment/csTube.svg",
   },
   "s5Tube": {
@@ -231,7 +231,7 @@ domItems = {
       left: "48%",
       top: "70%"
     },
-    classes: ["item microTube s5TubeColor"],
+    classes: "item microTube s5TubeColor",
     resources: "img/equipment/csTube.svg",
   },
   "wasteBasket": {
@@ -239,7 +239,7 @@ domItems = {
       left: "55%",
       top: "63.9%",
     },
-    classes: ["item wasteBasket"],
+    classes: "item wasteBasket",
     resources: "",
   },
   "waterBathNoLid": {
@@ -247,7 +247,7 @@ domItems = {
       left: "60%",
       top: "14.1%",
     },
-    classes: ["item waterBathNoLid"],
+    classes: "item waterBathNoLid",
     resources: "html/waterBathForm.htm",
   },
   "waterBathLid": {
@@ -255,7 +255,7 @@ domItems = {
       left: "61%",
       top: "21%",
     },
-    classes: ["item waterBathLid"],
+    classes: "item waterBathLid",
     resources: "",
   },
   "dyeRack": {
@@ -263,7 +263,7 @@ domItems = {
       left: "6.5%",
       top: "24%",
     },
-    classes: ["item dyeRack"],
+    classes: "item dyeRack",
     resources: "",
   },
   "loadDye": {
@@ -271,7 +271,7 @@ domItems = {
       left: "8%",
       top: "19.2%",
     },
-    classes: ["item clearTube loadDye"],
+    classes: "item clearTube loadDye",
     resources: "img/equipment/csTube.svg",
   },
   "gelTray": {
@@ -279,7 +279,7 @@ domItems = {
       left: "69%",
       top: "71.8%",
     },
-    classes: ["item gelTray"],
+    classes: "item gelTray",
     resources: "",
   },
   "gelComb": {
@@ -287,7 +287,7 @@ domItems = {
       left: "70%",
       top: "70%",
     },
-    classes: ["item gelComb"],
+    classes: "item gelComb",
     resources: "",
   },
   "electroBoxSide": {
@@ -295,7 +295,7 @@ domItems = {
       left: "82%",
       top: "72.5%",
     },
-    classes: ["item electroBoxSide"],
+    classes: "item electroBoxSide",
     resources: "",
   },
   "stainingTraySide": {
@@ -303,7 +303,7 @@ domItems = {
       left: "88%",
       top: "74.5%",
     },
-    classes: ["item stainingTraySide"],
+    classes: "item stainingTraySide",
     resources: "",
   },
   "stainedGel": {
@@ -312,7 +312,7 @@ domItems = {
       top: "74.5%",
       opacity: 0
     },
-    classes: ["item stainedGel"],
+    classes: "item stainedGel",
     resources: "",
   },
   "graduatedCylinder": {
@@ -320,7 +320,7 @@ domItems = {
       left: "84%",
       top: "63.7%",
     },
-    classes: ["item graduatedCylinder"],
+    classes: "item graduatedCylinder",
     resources: "img/equipment/graduatedCylinder.svg",
   },
   "labBenchTop": {
@@ -328,7 +328,7 @@ domItems = {
       left: "-21%",
       top: "-25%",
     },
-    classes: ["item labBenchTop"],
+    classes: "item labBenchTop",
     resources: "",
   },
   // "gelTopView": {
@@ -336,7 +336,7 @@ domItems = {
   //     left: "7%",
   //     top: "55%",
   //   },
-  //   classes: ["item gelTopView"],
+  //   classes: "item gelTopView",
   //   resources: "",
   // },
   "lidBox": {
@@ -344,7 +344,7 @@ domItems = {
       left: "-5.5%",
       top: "40%",
     },
-    classes: ["item lidBox"],
+    classes: "item lidBox",
     resources: "",
   },
   "lidSide": {
@@ -352,7 +352,7 @@ domItems = {
       left: "6%",
       top: "20.3%",
     },
-    classes: ["item lidSide"],
+    classes: "item lidSide",
     resources: "",
   },
   "arrowUp": {
@@ -360,7 +360,7 @@ domItems = {
       left: "60%",
       top: "10%",
     },
-    classes: ["item arrowUp"],
+    classes: "item arrowUp",
     resources: "",
   },
   "arrowDown": {
@@ -369,7 +369,7 @@ domItems = {
       top: "10%",
       "z-index": "3",
     },
-    classes: ["item arrowDown"],
+    classes: "item arrowDown",
     resources: "",
   },
   "powerSupplyTop": {
@@ -377,7 +377,7 @@ domItems = {
       left: "-3.9%",
       top: "19.4%",
     },
-    classes: ["item powerSupplyTop"],
+    classes: "item powerSupplyTop",
     resources: "html/powerSupplyForm.htm"
   },
   "tubeBlockTop": {
@@ -385,7 +385,7 @@ domItems = {
       left: "35%",
       top: "19%",
     },
-    classes: ["item tubeBlockTop"],
+    classes: "item tubeBlockTop",
     resources: "",
   },
   // Do we want to make these injected like the other tubes? //Joochan - I think it's fine the way it is now
@@ -393,49 +393,49 @@ domItems = {
     css: {
       top: "20%",
     },
-    classes: ["item tubeTop ladderTubeColor"],
+    classes: "item tubeTop ladderTubeColor",
     resources: "img/equipment/csTop.svg",
   },
   "tubeTop_1": {
     css: {
       top: "24.5%",
     },
-    classes: ["item tubeTop s0TubeColor"],
+    classes: "item tubeTop s0TubeColor",
     resources: "img/equipment/csTop.svg",
   },
   "tubeTop_2": {
     css: {
       top: "29%",
     },
-    classes: ["item tubeTop s1TubeColor"],
+    classes: "item tubeTop s1TubeColor",
     resources: "img/equipment/csTop.svg",
   },
   "tubeTop_3": {
     css: {
       top: "33.5%",
     },
-    classes: ["item tubeTop s2TubeColor"],
+    classes: "item tubeTop s2TubeColor",
     resources: "img/equipment/csTop.svg",
   },
   "tubeTop_4": {
     css: {
       top: "38%",
     },
-    classes: ["item tubeTop s3TubeColor"],
+    classes: "item tubeTop s3TubeColor",
     resources: "img/equipment/csTop.svg",
   },
   "tubeTop_5": {
     css: {
       top: "42.5%",
     },
-    classes: ["item tubeTop s4TubeColor"],
+    classes: "item tubeTop s4TubeColor",
     resources: "img/equipment/csTop.svg",
   },
   "tubeTop_6": {
     css: {
       top: "47%",
     },
-    classes: ["item tubeTop s5TubeColor"],
+    classes: "item tubeTop s5TubeColor",
     resources: "img/equipment/csTop.svg",
   },
   "tipBoxTop": {
@@ -443,7 +443,7 @@ domItems = {
       left: "33%",
       top: "60%",
     },
-    classes: ["item tipBoxTop"],
+    classes: "item tipBoxTop",
     resources: "img/equipment/tipBoxTop.svg",
   },
   "wasteBinTop": {
@@ -451,7 +451,7 @@ domItems = {
       left: "33% ",
       top: "75% ",
     },
-    classes: ["item wasteBinTop"],
+    classes: "item wasteBinTop",
     resources: "",
   },
   "micropipetteTopView": {
@@ -459,7 +459,7 @@ domItems = {
       left: "-10.5%",
       top: "71.6%",
     },
-    classes: ["item micropipetteTopView"],
+    classes: "item micropipetteTopView",
     resources: "",
   },
 
@@ -468,7 +468,7 @@ domItems = {
       left: "54.7%",
       top: "95%",
     },
-    classes: ["item pipetteTip1 activeTip opClass"],
+    classes: "item pipetteTip1 activeTip opClass",
     resources: "img/equipment/tip.svg",
   },
   "gelWell": {
@@ -476,7 +476,7 @@ domItems = {
       left: "1%",
       top: "46%",
     },
-    classes: ["item gelWell"],
+    classes: "item gelWell",
     resources: "",
     parent: "#sideView",
   },
@@ -485,7 +485,7 @@ domItems = {
       left: "20%",
       top: "46%",
     },
-    classes: ["item gelWellBoundary"],
+    classes: "item gelWellBoundary",
     resources: "",
     parent: "#sideView",
   },
@@ -494,7 +494,7 @@ domItems = {
       left: "11.6%",
       top: "55.3%",
     },
-    classes: ["item electroBoxBase"],
+    classes: "item electroBoxBase",
     resources: "",
   },
   "gelTopView": {
@@ -503,7 +503,7 @@ domItems = {
       top: "65.5%",
       "z-index": "1"
     },
-    classes: ["item gelTopView opClass"],
+    classes: "item gelTopView opClass",
     resources: "/img/equipment/gelWithLane.svg",
   },
   "stainingTray": {
@@ -511,7 +511,7 @@ domItems = {
       left: "28%",
       top: "55%",
     },
-    classes: ["item stainingTray"],
+    classes: "item stainingTray",
     resources: "",
   },
   "volumeButton": {
@@ -519,7 +519,7 @@ domItems = {
       left: "29.1%",
       top: "47.2%",
     },
-    classes: ["item volumeButton"],
+    classes: "item volumeButton",
     resources: "",
   },
   "volumeInput": {
@@ -527,7 +527,7 @@ domItems = {
       left: "26.5%",
       top: "47%",
     },
-    classes: ["item volumeInput"],
+    classes: "item volumeInput",
     resources: "",
   },
   "timerButton": {
@@ -535,7 +535,7 @@ domItems = {
       left: "64%",
       top: "36%",
     },
-    classes: ["item timerButton"],
+    classes: "item timerButton",
     resources: "",
   },
   "powerButton": {
@@ -543,7 +543,7 @@ domItems = {
       left: "29.1%",
       top: "47.2%",
     },
-    classes: ["item powerButton"],
+    classes: "item powerButton",
     resources: "",
   },
   "powerInput": {
@@ -551,7 +551,7 @@ domItems = {
       left: "26.5%",
       top: "47%",
     },
-    classes: ["item powerInput"],
+    classes: "item powerInput",
     resources: "",
   },
   "sideView": {
@@ -559,7 +559,7 @@ domItems = {
       left: "55%",
       top: "25%",
     },
-    classes: ["item sideView opClass"],
+    classes: "item sideView opClass",
     resources: "/html/sideView.htm"
   }
 }

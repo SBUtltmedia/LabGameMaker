@@ -27,7 +27,7 @@ body {
 }
 
 #view {
-  width: 80%;
+  width: 71%;
   height: 80%;
   top: 0%;
   left: 10%;
@@ -54,13 +54,23 @@ body {
 }
 
 #saveButton {
+  left: 65%;
+  top: 5%;
+  width: 15%;
+  height: 10%;
+  z-index: 125;
+  position: absolute;
+  background-image: url("../resources/img/UI/Save.svg");
+  background-repeat: no-repeat;
+}
+#loadButton {
   left: 80%;
   top: 5%;
   width: 15%;
   height: 10%;
   z-index: 125;
   position: absolute;
-  background-image: url("../resources/img/UI/check.svg");
+  background-image: url("../resources/img/UI/Load.svg");
   background-repeat: no-repeat;
 }
 .repeats {
@@ -299,19 +309,16 @@ body {
   fill: #2E4EA2;
 }
 
-.item {
+.item ,
+.referenceItem{
   position: absolute;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
   z-index: 0;
 }
-
-.referenceItem {
+ .referenceItem{
   position: relative;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center;
   z-index: 5;
 }
 
@@ -361,10 +368,10 @@ body {
 }
 
 .micropipette {
-  width: 4.6%;
-  height: 23%;
+  width: 4.7%;
+  height: 24%;
   background-image: url("../resources/img/equipment/micropipette20.svg");
-  background-size: cover;
+
   z-index: 4;
 }
 

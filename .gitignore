@@ -1,2 +1,7 @@
 .*
+api/vendor
+api/composer.*
+api/composer-setup.php
+games
 !/.gitignore
+/BAK

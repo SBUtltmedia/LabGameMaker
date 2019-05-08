@@ -2,22 +2,84 @@
   "itemId": "liquidContainer",
   "liquidType": "empty",
   "acceptedInputs": ["pipette"],
-  "inputFunction" : "transferLiquid",
-  "classes": ["referenceItem liquidContainer"],
+  "inputFunction": "transferLiquid",
+  "classes": "liquidContainer",
   "resources": ""
 }, {
   "itemId": "tube",
   "color": "gray",
   "liquidType": "empty",
   "acceptedInputs": ["pipette"],
-  "inputFunction" : "transferLiquid",
-  "classes": ["referenceItem microTube"],
+  "inputFunction": "transferLiquid",
+  "classes": "microTube",
   "resources": "img/equipment/csTube.svg"
 }, {
   "itemId": "pipette",
   "volume": 0,
   "liquidType": "empty",
   "acceptedInputs": ["keyboard"],
-  "classes": ["referenceItem micropipette"],
+  "classes": "micropipette",
   "resources": "html/pipetteForm.htm"
+}, {
+  "itemId": "iceBucket",
+  "acceptedInputs": ["tube"],
+  "classes": "iceBucket",
+  "resources": ""
+}, {
+  "itemId": "pipetteHolder",
+  "acceptedInputs": ["pipette"],
+  "classes": "pipetteHolder",
+  "resources": ""
+}, {
+  "itemId": "tipHolder",
+  "liquidType": "empty",
+  "acceptedInputs": ["pipette"],
+  "classes": "tipHolder",
+  "resources": ""
+}, {
+  "itemId": "tubeBlock",
+  "acceptedInputs": ["tube"],
+  "classes": "tubeBlock ",
+  "resources": ""
+}, {
+  "itemId": "wasteBasket",
+  "acceptedInputs": ["all"],
+  "classes": "wasteBasket",
+  "resources": ""
+}, {
+  "itemId": "waterBathNoLid",
+  "acceptedInputs": ["tubeBlock"],
+  "classes": "waterBathNoLid",
+  "resources": ""
+}, {
+  "itemId": "waterBathLid",
+  "acceptedInputs": ["none"],
+  "classes": "waterBathLid",
+  "resources": ""
+}, {
+  "itemId": "dyeRack",
+  "acceptedInputs": ["tube"],
+  "classes": "dyeRack",
+  "resources": ""
+}, {
+  "itemId": "gelTray",
+  "acceptedInputs": ["stainedGel"],
+  "classes": "gelTray",
+  "resources": ""
+}, {
+  "itemId": "gelComb",
+  "acceptedInputs": ["none"],
+  "classes": "gelComb",
+  "resources": ""
+}, {
+  "itemId": "electroBoxSide",
+  "acceptedInputs": ["stainedGel"],
+  "classes": "electroBoxSide",
+  "resources": ""
+}, {
+  "itemId": "stainingTraySide",
+  "liquidType": "empty",
+  "acceptedInputs": ["stainedGel", "graduatedCylinder"],
+  "classes": "stainingTraySide",
+  "resources": ""
 }]

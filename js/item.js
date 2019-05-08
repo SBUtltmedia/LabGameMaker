@@ -18,7 +18,7 @@ this.addItemToList = function(item) {
     parent = "#view",
     itemId,
     css = {},
-    classes = [],
+    classes = "",
     resources,
   })
   {
@@ -72,7 +72,7 @@ this.addItemToList = function(item) {
     parent = "#cabinet",
     itemId,
     css = {},
-    classes = [],
+    classes = "",
     data = ""
 
   }) {
@@ -85,7 +85,7 @@ this.addItemToList = function(item) {
     // )
     var div = $('<div/>', {
       id: itemId,
-      class: [...classes],
+      class: classes,
       html: data
     }).css(css)
 
