@@ -73,15 +73,27 @@ $(function() {
           var origId = clone.attr('id')
           clone.removeAttr('id')
           clone.css({
-            'left': (ui.position.left - position.left) / $("#view").width() * 100 + "%",
-            'top': (ui.position.top - position.top) / $("#view").height() * 100 + "%",
+            'left': (ui.position.left - position.left),
+            'top': (ui.position.top - position.top),
+            // 'left': (ui.position.left - position.left) / $("#view").width() * 100 + "%",
+            // 'top': (ui.position.top - position.top) / $("#view").height() * 100 + "%",
             position: "absolute",
           }).attr({
             id: `${origId}_${Date.now()}`
           })
-
-
           $(this).append(clone);
+        }
+      }
+    });
+
+    $('#trashForUnuse').droppable({
+      activeClass: 'ui-state-hover',
+      accept: '.ui-draggable',
+      drop: function(event, ui) {
+        var position = $(this).position()
+
+        if (ui.draggable.hasClass("dropped")) {
+          $(ui.draggable).remove();
         }
       }
     });
@@ -142,7 +154,7 @@ $(function() {
       for (i of game.domItems) {
         itemName = i.id
         referenceItem = item.itemList[itemName.split("_")[0]]
-        referenceItem.classes+=" item"
+        referenceItem.classes += " item"
         toBuild = Object.assign(referenceItem, {
           parent: "#view",
           itemId: itemName,
@@ -153,5 +165,9 @@ $(function() {
     })
     overlay.message("All your items have been loaded.", "OK")
   })
+
+
+
+
 
 })
