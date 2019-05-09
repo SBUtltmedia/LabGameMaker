@@ -72,11 +72,16 @@ $(function() {
         if (clone) {
           var origId = clone.attr('id')
           clone.removeAttr('id')
+
+          var scrollTop = $(window).scrollTop();
+        					var docHeight = $("#cabinet").height();
+        					var winHeight = $(window).height();
+        					var scrollPercent = (scrollTop) / (docHeight - winHeight);
+        					var scrollPercentRounded = Math.round(scrollPercent*100);
+console.log(scrollPercentRounded)
           clone.css({
-            'left': (ui.position.left - position.left),
-            'top': (ui.position.top - position.top),
-            // 'left': (ui.position.left - position.left) / $("#view").width() * 100 + "%",
-            // 'top': (ui.position.top - position.top) / $("#view").height() * 100 + "%",
+            'left': (ui.position.left - position.left) / $("#view").width() * 100 + "%",
+            'top': ((ui.position.top - position.top) / $("#view").height() * 100) -scrollPercentRounded + "%",
             position: "absolute",
           }).attr({
             id: `${origId}_${Date.now()}`
@@ -106,6 +111,7 @@ $(function() {
   function viewPxToPercent(postion) {
 
     var left = parseInt(position.x) / parseInt($("#view").css("width")) * 100
+    var top = parseInt(position.y) / parseInt($("#view").css("height")) * 100
 
   }
 
@@ -113,11 +119,6 @@ $(function() {
   $("#saveButton").on("click", function(evt) {
     var domItems = []
     $("#view >div").each(function() {
-
-      // var itemNumber = this.id.split(/[^\d]+/)[1]
-      //
-      // var newLeft = parseInt($(this).css("left")) / $("#view").width() * 100
-      // var newTop = parseInt($(this).css("top")) / $("#view").height() * 100
 
       domItems.push({
         id: this.id,
